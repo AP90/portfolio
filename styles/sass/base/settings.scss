@@ -1,0 +1,36 @@
+// variables
+$off-black: #121212;
+$off-grey: #212121;
+$light-grey: #8b8b8b;
+$off-white: #f7f7f7;
+
+// fonts
+@font-face {
+    font-family: TCM;
+    src: url("../fonts/TCM.TTF");
+}
+
+@font-face {
+    font-family: TCM-light;
+    src: url("../fonts/TCM-light.OTF");
+}
+
+
+
+
+// general styles
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #121212;
+    cursor: default;
+    font-family: TCM-light;
+}
+
+// .container {
+//     height: 100vh;
+//     padding: .5rem;
+//     width: 100vw;
+// }
