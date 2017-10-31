@@ -40,6 +40,7 @@ html {
     align-items: end;
     display: grid;
     justify-items: start;
+    animation: fadein 4s;
     div {
         color: $off-white;
         letter-spacing: .5rem;
@@ -48,7 +49,35 @@ html {
     }
 }
 
+@keyframes fadein {
+    0%     { opacity: 0; }
+    10%    { opacity: 0.05; }
+    100%   { opacity: 1; }
+}
+
+@keyframes fadeinfast {
+    from     { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fromleft {
+    
+    from { margin-left: -6rem}
+    to   { margin-left: inherit}
+}
+
+@keyframes fromright {
+    from { margin-left: 6rem}
+    to   { margin-left: 0}
+}
+
+@keyframes frombelow {
+    from {margin-top: 5rem}
+    to {margin-top: 3rem}
+}
+
 .logo {
+    animation: fadein 4s;
     color: $off-white;
     font-weight: 100;
     letter-spacing: .4rem;
@@ -58,6 +87,7 @@ html {
 }
 
 .grey-box {
+    animation: fadein 2s;
     background-color: $off-grey;
     height: 32rem;
     margin-top: 3rem;
@@ -70,32 +100,68 @@ html {
     font-size: 7rem;
     font-weight: 100;
     line-height: 0;
+    &.title--fromleft {
+        animation: fadein 5s, fromleft 4s;
+    }
+    &.title--fromright {
+        animation: fadein 5s, fromright 4s;
+    }
 }
 
+
 .homepage__links {
-    padding: 10rem 0 0 0;
-    .nav-link {
+    padding: 9rem 0 0 0;
+    .nav-links {
         color: $off-white;
-        display: block;
         font-size: 2.5rem;
         letter-spacing: .5rem;
-        padding-bottom: 3rem;
         text-decoration: none;
         text-transform: uppercase;
-        &:hover {
-            color: red;
+        span {
+            display: inline-block;
+            opacity: 0;
+            padding-bottom: 3rem;
+            &:hover {
+                cursor: pointer;
+            }
+            &::after {
+                background: $off-white;                
+                content: "";
+                display: block;
+                height: .1rem;
+                transition: width .5s;
+                width: 0;
+            }
+            &:hover::after {
+                animation: fadein 1s;
+                transition: width .5s;
+                width: 100%;
+            }
         }
+
     }
     div {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
     }
     a {
+        animation: fadein 2s ease 5s 1 normal forwards running;
         color: $light-grey;
         font-size: 3rem;
+        opacity: 0;
         padding-right: 1rem;
         &:hover {
             color: $off-white;
         }
     }
 }
+// none 0 ease 0 1 normal none running
 
+@for $i from 1 through 4 {
+    .nav-link-#{$i} {
+        animation-name: fadeinfast;
+        animation-duration: (1s * $i);
+        animation-delay: (1s * $i);
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}
