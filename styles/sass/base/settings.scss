@@ -27,13 +27,7 @@ html {
     font-family: TCM-light;
 }
 
-// grid
-.homepage {
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    grid-template-columns: 1.5fr 6fr 4fr;
-}
+
 
 
 .copyright-col {
@@ -47,33 +41,6 @@ html {
         padding: 0 0 1rem 1rem;
         writing-mode: vertical-rl;
     }
-}
-
-@keyframes fadein {
-    0%     { opacity: 0; }
-    10%    { opacity: 0.05; }
-    100%   { opacity: 1; }
-}
-
-@keyframes fadeinfast {
-    from     { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes fromleft {
-    
-    from { margin-left: -6rem}
-    to   { margin-left: inherit}
-}
-
-@keyframes fromright {
-    from { margin-left: 6rem}
-    to   { margin-left: 0}
-}
-
-@keyframes frombelow {
-    from {margin-top: 5rem}
-    to {margin-top: 3rem}
 }
 
 .logo {
@@ -108,60 +75,7 @@ html {
     }
 }
 
-
-.homepage__links {
-    padding: 9rem 0 0 0;
-    .nav-links {
-        color: $off-white;
-        font-size: 2.5rem;
-        letter-spacing: .5rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        span {
-            display: inline-block;
-            opacity: 0;
-            padding-bottom: 3rem;
-            &:hover {
-                cursor: pointer;
-            }
-            &::after {
-                background: $off-white;                
-                content: "";
-                display: block;
-                height: .1rem;
-                transition: width .5s;
-                width: 0;
-            }
-            &:hover::after {
-                animation: fadein 1s;
-                transition: width .5s;
-                width: 100%;
-            }
-        }
-
-    }
-    div {
-        margin-top: 1rem;
-    }
-    a {
-        animation: fadein 2s ease 5s 1 normal forwards running;
-        color: $light-grey;
-        font-size: 3rem;
-        opacity: 0;
-        padding-right: 1rem;
-        &:hover {
-            color: $off-white;
-        }
-    }
-}
-// none 0 ease 0 1 normal none running
-
-@for $i from 1 through 4 {
-    .nav-link-#{$i} {
-        animation-name: fadeinfast;
-        animation-duration: (1s * $i);
-        animation-delay: (1s * $i);
-        animation-iteration-count: 1;
-        animation-fill-mode: forwards;
-    }
+.subtitle {
+    @include subtitle;
+    display: block;
 }

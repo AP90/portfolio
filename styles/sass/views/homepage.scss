@@ -1,0 +1,43 @@
+// grid
+.homepage {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1.5fr 6fr 4fr;
+}
+
+.homepage__links {
+    padding: 9rem 0 0 0;
+    .nav-links {
+        @include subtitle;
+        span {
+            display: inline-block;
+            opacity: 0;
+            padding-bottom: 3rem;
+            @include underline;
+        }
+    }
+    div {
+        margin-top: 1rem;
+    }
+    a {
+        animation: fadein 2s ease 5s 1 normal forwards running;
+        color: $light-grey;
+        font-size: 3rem;
+        opacity: 0;
+        padding-right: 1rem;
+        &:hover {
+            color: $off-white;
+        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .nav-link-#{$i} {
+        animation-name: fadeinfast;
+        animation-duration: (.5s * $i);
+        animation-delay: (1s * $i);
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+}

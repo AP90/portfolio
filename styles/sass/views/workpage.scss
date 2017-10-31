@@ -1,0 +1,60 @@
+.workpage {
+    display: none;
+}
+
+
+// grid
+.workpage__grid {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 7fr 2fr;
+}
+
+
+.workpage__content {
+    // margin-top: 7rem;
+    display: grid;
+    grid-template-columns: 2.5fr 4fr;
+    .workpage__text {
+        margin-top: 7rem;
+        .subtitle {
+            display: inline-block;
+        }
+        .title {
+            animation: fadein 4s;
+            line-height: 4rem;
+        }
+        p {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.2rem;
+            font-weight: lighter;
+            padding: 3rem 8rem 0 0;
+        }
+    }
+}
+
+
+.workpage__links {
+    @include subtitle;
+    margin-top: 2.5rem;
+    span {
+        display: inline-block;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+    .projectlink {
+        letter-spacing: .1rem;
+        @include underline;
+    }
+    .arrow {
+        cursor: pointer;
+        font-size: 6rem;
+        padding-bottom: 2rem;
+    }
+}
+
+
+.workpage__content--project1 {
+
+}
