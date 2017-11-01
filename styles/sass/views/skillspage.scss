@@ -1,0 +1,16 @@
+.skillspage {
+    display: none;
+}
+
+
+// grid
+.skillspage__grid {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 7fr 2fr;
+}
+
+.skillspage__content {
+    margin-top: 7rem;
+}

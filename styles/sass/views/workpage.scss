@@ -1,8 +1,14 @@
-.workpage {
+.project1-page {
     display: none;
 }
 
+.project2-page {
+    display: none;
+}
 
+.project3-page {
+    display: none;
+}
 // grid
 .workpage__grid {
     display: grid;
@@ -22,10 +28,12 @@
             display: inline-block;
         }
         .title {
-            animation: fadein 4s;
+            animation: fadein 2s;
             line-height: 4rem;
         }
         p {
+            opacity: 0;
+            animation: fadein 2s ease 1s 1 normal forwards running;
             font-family: 'Times New Roman', Times, serif;
             font-size: 1.2rem;
             font-weight: lighter;
@@ -34,27 +42,68 @@
     }
 }
 
+.workpage__projectlinks {
+    animation: fadein 4s;
+    text-align: right;
+    padding: 3rem 8rem 0 0;
+    span {
+        opacity: 0;
+        display: inline-block;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-transform: uppercase;
+        @include underline;
+    }
+}
+
+@for $i from 1 through 2 {
+    .codelink-#{$i} {
+        animation-name: fadein;
+        animation-duration: (.5s * $i);
+        // animation-delay: (.7s * $i);
+        animation-delay: ($i + .8s);
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+    }
+}
 
 .workpage__links {
     @include subtitle;
+    font-size: 1rem;
     margin-top: 2.5rem;
     span {
         display: inline-block;
+        margin-bottom: 1.5rem;
         font-size: 1.5rem;
-        padding-bottom: 1rem;
+        // padding-bottom: 1rem;
     }
     .projectlink {
+        display: inline-block;
         letter-spacing: .1rem;
+        opacity: 0;
         @include underline;
     }
     .arrow {
         cursor: pointer;
         font-size: 6rem;
-        padding-bottom: 2rem;
+    }
+}
+
+@for $i from 1 through 3 {
+    .project-#{$i} {
+        animation-name: fadein;
+        animation-duration: (.5s * $i);
+        // animation-delay: (.5s * $i);
+        animation-delay: ($i + .8s);
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
     }
 }
 
 
-.workpage__content--project1 {
 
-}
+
+
+

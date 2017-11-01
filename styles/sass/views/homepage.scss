@@ -21,7 +21,7 @@
         margin-top: 1rem;
     }
     a {
-        animation: fadein 2s ease 5s 1 normal forwards running;
+        animation: fadein 1s ease 3.5s 1 normal forwards running;
         color: $light-grey;
         font-size: 3rem;
         opacity: 0;
@@ -34,10 +34,12 @@
 
 @for $i from 1 through 4 {
     .nav-link-#{$i} {
-        animation-name: fadeinfast;
+        animation-name: fadein;
         animation-duration: (.5s * $i);
-        animation-delay: (1s * $i);
+        animation-delay: (.7s * $i);
+        // animation-delay: ($i + .8s);
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
+        animation-direction: normal;
     }
 }
