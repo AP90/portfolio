@@ -1,0 +1,12 @@
+.aboutpage {
+    display: none;
+    .japanese {
+        animation: fadein 2s ease 2s 1 normal forwards running;
+        opacity: 0;
+        font-family: "MS PGothic";
+        font-weight: lighter;
+    }
+    .social-links {
+        margin-top: 10.2em;
+    }
+}

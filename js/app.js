@@ -5,7 +5,7 @@ $(".nav-link-1").on("click", function() {
 })
 
 $(".arrow").on("click", function() {
-    $(".project1-page, .project2-page, .project3-page, .skillspage").fadeOut("slow", function() {
+    $(".project1-page, .project2-page, .project3-page, .skillspage, .aboutpage, .contactpage").fadeOut("slow", function() {
         setTimeout(function() {
             $(".homepage").fadeIn("slow");
         }, 800)
@@ -41,6 +41,22 @@ $(".nav-link-2").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
         setTimeout(function() {
             $(".skillspage").fadeIn("slow");
+        });
+    });
+});
+
+$(".nav-link-3").on("click", function() {
+    $(".homepage").fadeOut("slow", function() {
+        setTimeout(function() {
+            $(".aboutpage").fadeIn("slow");
+        });
+    });
+});
+
+$(".nav-link-4").on("click", function() {
+    $(".homepage").fadeOut("slow", function() {
+        setTimeout(function() {
+            $(".contactpage").fadeIn("slow");
         });
     });
 });

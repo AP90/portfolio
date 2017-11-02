@@ -25,6 +25,7 @@
     .workpage__text {
         margin-top: 7rem;
         .subtitle {
+            animation: fadein 1s, fromleftshort 1s;
             display: inline-block;
         }
         .title {

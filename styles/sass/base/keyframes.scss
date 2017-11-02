@@ -15,6 +15,12 @@
     to   { margin-left: inherit}
 }
 
+@keyframes fromleftshort {
+    
+    from { margin-left: -2rem}
+    to   { margin-left: inherit}
+}
+
 @keyframes fromright {
     from { margin-left: 6rem}
     to   { margin-left: 0}

@@ -79,3 +79,16 @@ html {
     @include subtitle;
     display: block;
 }
+
+.social-links {
+    a {
+        animation: fadein 1s ease 2s 1 normal forwards running;
+        color: $light-grey;
+        font-size: 3rem;
+        opacity: 0;
+        padding-right: 1rem;
+        &:hover {
+            color: $off-white;
+        }
+    }
+}

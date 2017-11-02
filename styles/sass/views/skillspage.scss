@@ -12,5 +12,36 @@
 }
 
 .skillspage__content {
-    margin-top: 7rem;
+    margin-top: 5rem;
+    .skills-header {
+        animation: fadein 1s, fromleftshort 1s;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+}
+
+.skillspage__content__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    .skillpanel {
+        color: $off-white;
+        justify-items: center;
+        text-align: center;
+        padding-bottom:2em;
+        animation: fadein 2s;
+        h1 {
+            color: $light-grey;
+            font-size: 1.5rem;
+            letter-spacing: .3rem;
+            text-transform: uppercase;
+        }
+    }
+    .icon-badge {
+        font-size: 6em;
+        padding-left: .2em;
+    }
+    .icon-badge--mod {
+        margin-left: -.3em;
+    }
 }
