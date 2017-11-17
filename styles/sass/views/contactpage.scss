@@ -26,6 +26,7 @@ form {
         border: none;
         border-bottom: 1px solid $off-white;
         display: block;
+        resize: none;
         width: 100%;
         &:focus {
             outline: none;
