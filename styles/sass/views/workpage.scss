@@ -44,9 +44,11 @@
             opacity: 0;
             animation: fadein 2s ease 0s 1 normal forwards running;
             font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: lighter;
-            padding: 3rem 8rem 0 0;
+            line-height: 1.6rem;
+            padding: 1rem 8rem 0 0;
+            // text-indent: 1em;
         }
     }
 }
