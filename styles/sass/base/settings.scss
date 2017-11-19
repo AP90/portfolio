@@ -10,12 +10,12 @@ $off-white: #f7f7f7;
     src: url("../fonts/TCM.TTF");
 }
 
-// @font-face {
-//     font-family: TCMlight;
-//     src: url("../fonts/TCMlight.OTF");
-// }
+@font-face {
+    font-family: TCMlight;
+    src: url("../fonts/TCMlight.ttf");
+}
 
-// general styles
+general styles
 * {
     box-sizing: border-box;
 }
@@ -25,7 +25,7 @@ html {
     color: white;
     cursor: default;
     // font-family: 'Mukta Mahee', sans-serif;
-    font-family: TCM;
+    font-family: TCMlight;
     font-weight: 200;
 }
 
