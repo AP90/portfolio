@@ -9,6 +9,19 @@
 .project3-page {
     display: none;
 }
+
+.project4-page {
+    display: none;
+}
+
+.project5-page {
+    display: none;
+}
+
+.project6-page {
+    display: none;
+}
+
 // grid
 .workpage__grid {
     display: grid;
@@ -108,12 +121,12 @@
     }
 }
 
-@for $i from 1 through 3 {
+@for $i from 1 through 6 {
     .project-#{$i} {
         animation-name: fadein;
-        animation-duration: (.5s * $i);
+        animation-duration: (.3s * $i);
         // animation-delay: (.5s * $i);
-        animation-delay: ($i * .5s);
+        animation-delay: ($i * .3s);
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         animation-direction: alternate;
