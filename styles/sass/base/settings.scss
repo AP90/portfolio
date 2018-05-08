@@ -4,6 +4,10 @@ $off-grey: #212121;
 $light-grey: #8b8b8b;
 $off-white: #f7f7f7;
 
+// screen sizes
+$tablet: 67rem;
+
+
 // fonts
 // @font-face {
 //     font-family: TCM;
@@ -15,16 +19,21 @@ $off-white: #f7f7f7;
     src: url("../fonts/TCMlight.ttf");
 }
 
-general styles
+//general styles
 * {
     box-sizing: border-box;
 }
 
 html {
-    background: #121212;
+    background: $off-black;
     color: white;
     cursor: default;
     font-family: TCMlight;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .copyright-col {
@@ -48,6 +57,10 @@ html {
     height: 1rem;
     padding: 1.5rem 0 0 0;
     text-transform: uppercase;
+}
+
+.logo--tablet {
+    display: none;
 }
 
 .grey-box {
@@ -87,5 +100,15 @@ html {
         &:hover {
             color: $off-white;
         }
+    }
+}
+
+@media (max-width: $tablet) {
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .logo--desktop {
+        display: none;
     }
 }
