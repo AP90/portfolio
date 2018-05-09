@@ -89,3 +89,20 @@ $(".nav-link-4").on("click", function() {
         });
     });
 });
+
+
+// navbar x animation
+// $(".icon").click(() => {
+//     $(".icon").toggleClass("active", () => {
+        
+//     });
+//     $(".navcontent").fadeToggle("slow");
+// })
+
+$(".icon").on("click", function() {
+    $(".navcontent").fadeToggle("slow");
+})
+
+$(".icon").on("click", function() {
+    $(".icon").toggleClass("active");
+})

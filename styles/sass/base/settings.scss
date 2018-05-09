@@ -6,6 +6,7 @@ $off-white: #f7f7f7;
 
 // screen sizes
 $tablet: 67rem;
+$mobile: 59rem;
 
 
 // fonts
@@ -85,6 +86,14 @@ html {
     }
 }
 
+.title--small {
+    font-size: 5.7em;
+}
+
+.title--mid {
+    font-size: 6.2rem;
+}
+
 .subtitle {
     @include subtitle;
     display: block;
@@ -112,3 +121,10 @@ html {
         display: none;
     }
 }
+
+// @media (max-width: $mobile) {
+//     .container {
+//         max-width: 80%;
+//         margin: 0 auto;
+//     }
+// }
