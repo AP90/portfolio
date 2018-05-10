@@ -1,3 +1,4 @@
+
 $(".nav-link-1").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
         $(".project1-page").fadeIn("5000ms");
@@ -92,17 +93,52 @@ $(".nav-link-4").on("click", function() {
 
 
 // navbar x animation
-// $(".icon").click(() => {
-//     $(".icon").toggleClass("active", () => {
-        
-//     });
-//     $(".navcontent").fadeToggle("slow");
-// })
 
 $(".icon").on("click", function() {
+    // used to show navcontent div
     $(".navcontent").fadeToggle("slow");
+    animateIcon();
 })
 
-$(".icon").on("click", function() {
+// utility methods
+
+function animateIcon() {
+    // used for icon animation
     $(".icon").toggleClass("active");
-})
+    // hide body overflow to stop scrolling away from hamburger icon
+    $("body").toggleClass("hidden");
+}
+
+function fadeEverything() {
+    $(".project1-page, .project2-page, .project3-page, .project4-page, .project5-page, .project6-page, .skillspage, .aboutpage, .contactpage, .homepage").fadeOut("fast");
+}
+
+function fadeOutNav() {
+    fadeEverything();
+    setTimeout(function() {
+        $(".navcontent").fadeToggle("slow");
+    }, 200);
+    animateIcon();
+}
+
+// navlinks for tablet and mobile menu
+
+$(".nav-link-1--tablet").on("click", function() {
+    fadeOutNav();
+    $(".project1-page").fadeIn("slow");
+});
+
+$(".nav-link-2--tablet").on("click", function() {
+    fadeOutNav();
+    $(".skillspage").fadeIn("slow");
+});
+
+$(".nav-link-3--tablet").on("click", function() {
+    fadeOutNav();
+    $(".aboutpage").fadeIn("slow");
+});
+
+$(".nav-link-4--tablet").on("click", function() {
+    fadeOutNav();
+    $(".contactpage").fadeIn("slow");
+});

@@ -45,3 +45,30 @@
         margin-left: -.3em;
     }
 }
+
+
+// ************* ************* //
+//        TABLET STYLES        //
+// ************* ************* //
+
+@media (max-width: $tablet) {
+    .skillspage__grid {
+        grid-template-columns: 1fr;
+    }
+    .skillspage {
+        .workpage__links {
+            position: relative;
+        }
+    }
+}
+
+
+// ************* ************* //
+//        MOBILE STYLES        //
+// ************* ************* //
+
+@media (max-width: $mobile) {
+    .skillspage__content__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

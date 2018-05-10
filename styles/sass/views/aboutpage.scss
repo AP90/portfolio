@@ -1,12 +1,28 @@
 .aboutpage {
     display: none;
     .japanese {
-        animation: fadein 2s ease 2s 1 normal forwards running;
-        opacity: 0;
+        animation: fadein 2s;
         font-family: "MS PGothic";
         font-weight: lighter;
     }
     .social-links {
         margin-top: 10.2em;
+        a {
+            animation: fadein 2s;
+            // animation: none;
+            opacity: 1;
+        }
+    }
+}
+
+// ************* ************* //
+//        TABLET STYLES        //
+// ************* ************* //
+
+@media (max-width: $tablet) {
+    .aboutpage {
+        .social-links {
+            margin-top: 8.4em;
+        }
     }
 }

@@ -32,6 +32,11 @@ html {
     font-family: TCMlight;
 }
 
+.hidden {
+    overflow: hidden;
+}
+
+
 .container {
     max-width: 100%;
     margin: 0 auto;
@@ -120,6 +125,10 @@ html {
     .logo--desktop {
         display: none;
     }
+
+    .copyright-col {
+        display: none;
+    }
 }
 
 // @media (max-width: $mobile) {
@@ -143,7 +152,6 @@ html {
     .navbar--tablet {
         display: flex;
         justify-content: space-between;
-
     }
 
     .icon {
@@ -255,6 +263,10 @@ html {
 
     .logo--tablet {
         padding: 1.5rem 0 0 20px;
+    }
+
+    .navcontent__links {
+        padding: 7rem 0 0 0;
     }
 }
 

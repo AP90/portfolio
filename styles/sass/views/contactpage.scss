@@ -38,3 +38,15 @@ form {
         @include underline;
     }
 }
+
+// ************* ************* //
+//        TABLET STYLES        //
+// ************* ************* //
+
+@media (max-width: $mobile) {
+    .contactpage {
+        .grey-box {
+            display: none;
+        }
+    }
+}
