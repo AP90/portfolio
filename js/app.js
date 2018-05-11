@@ -93,6 +93,7 @@ $(".project-6").on("click", function() {
 
 $(".nav-link-1").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
+        window.scrollTo(0, 0);
         $(".project1-page").fadeIn("slow");
     });
 })
@@ -100,18 +101,21 @@ $(".nav-link-1").on("click", function() {
 
 $(".nav-link-2").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
+        window.scrollTo(0, 0);
         $(".skillspage").fadeIn("slow");
     });
 });
 
 $(".nav-link-3").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
+        window.scrollTo(0, 0);
         $(".aboutpage").fadeIn("slow");
     });
 });
 
 $(".nav-link-4").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
+        window.scrollTo(0, 0);
         $(".contactpage").fadeIn("slow");
     });
 });
