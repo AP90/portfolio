@@ -1,7 +1,38 @@
+// carousel on mobile 
+let i = 0;
+let images = [];
+let time = 3000;
+
+images[0] = "styles/images/prepxp2.png";
+images[1] = "styles/images/hiit-timer.png";
+images[2] = "styles/images/kuroinu.png";
+images[3] = "styles/images/parker-belgravia.png";
+
+function changeImg() {
+
+    document.slide.src = images[i];
+    $(".slide-img").fadeToggle("slow");
+    if (i < images.length - 1) {
+        i++;
+        setTimeout(function() {
+            $(".slide-img").fadeToggle("slow"); 
+        }, 2000);
+    } else {
+        i = 0;
+        setTimeout(function() {
+            $(".slide-img").fadeToggle("slow"); 
+        }, 2000);
+    }
+    setTimeout("changeImg()", time);
+}
+
+window.onload = changeImg;
+
+
 
 $(".nav-link-1").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
-        $(".project1-page").fadeIn("5000ms");
+        $(".project1-page").fadeIn("slow");
     });
 })
 
@@ -69,25 +100,25 @@ $(".project-6").on("click", function() {
 
 $(".nav-link-2").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
-        setTimeout(function() {
+        // setTimeout(function() {
             $(".skillspage").fadeIn("slow");
-        });
+        // });
     });
 });
 
 $(".nav-link-3").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
-        setTimeout(function() {
+        // setTimeout(function() {
             $(".aboutpage").fadeIn("slow");
-        });
+        // });
     });
 });
 
 $(".nav-link-4").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
-        setTimeout(function() {
+        // setTimeout(function() {
             $(".contactpage").fadeIn("slow");
-        });
+        // });
     });
 });
 
