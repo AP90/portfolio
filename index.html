@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="styles/fonts/font-mfizz/font-mfizz.css">
   <link rel="stylesheet" type="text/css" href="styles/css/styles.css">
 
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+     (function(){
+        emailjs.init("user_4mXZpSFbWY2UuIE2UWFcr");
+     })();
+  </script>
 </head>
 <body>
 
@@ -639,12 +645,12 @@
                             <span class="subtitle worktitle">Contact</span><br>
                             <form>
                                 <h2>Name</h2>
-                                <input type="text">
+                                <input type="text" class="contact__name">
                                 <h2>Email</h2>
-                                <input type="text">
+                                <input type="text" class="contact__email">
                                 <h2>Message</h2>
-                                <textarea name="" id="" cols="30" rows="4"></textarea>
-                                <h3>Send</h3>
+                                <textarea class="contact__message" name="" id="" cols="30" rows="4"></textarea>
+                                <h3 class="contact__send">Send</h3>
                             </form>
                         </div>
                 </div>

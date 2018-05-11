@@ -30,11 +30,7 @@ window.onload = changeImg;
 
 
 
-$(".nav-link-1").on("click", function() {
-    $(".homepage").fadeOut("slow", function() {
-        $(".project1-page").fadeIn("slow");
-    });
-})
+// arrow & project links for workpage
 
 $(".arrow").on("click", function() {
     $(".project1-page, .project2-page, .project3-page, .project4-page, .project5-page, .project6-page, .skillspage, .aboutpage, .contactpage").fadeOut("slow", function() {
@@ -93,32 +89,30 @@ $(".project-6").on("click", function() {
     });
 });
 
+// nav links for home page
 
-
-
+$(".nav-link-1").on("click", function() {
+    $(".homepage").fadeOut("slow", function() {
+        $(".project1-page").fadeIn("slow");
+    });
+})
 
 
 $(".nav-link-2").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
-        // setTimeout(function() {
-            $(".skillspage").fadeIn("slow");
-        // });
+        $(".skillspage").fadeIn("slow");
     });
 });
 
 $(".nav-link-3").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
-        // setTimeout(function() {
-            $(".aboutpage").fadeIn("slow");
-        // });
+        $(".aboutpage").fadeIn("slow");
     });
 });
 
 $(".nav-link-4").on("click", function() {
     $(".homepage").fadeOut("slow", function() {
-        // setTimeout(function() {
-            $(".contactpage").fadeIn("slow");
-        // });
+        $(".contactpage").fadeIn("slow");
     });
 });
 
@@ -172,4 +166,24 @@ $(".nav-link-3--tablet").on("click", function() {
 $(".nav-link-4--tablet").on("click", function() {
     fadeOutNav();
     $(".contactpage").fadeIn("slow");
+});
+
+
+// handle emails
+
+let contactName = $(".contact__name");
+let contactMessage = $(".contact__message");
+let contactEmail = $(".contact__email");
+
+$(".contact__send").on("click", () => {
+    let name = contactName.val();
+    let email = contactEmail.val();
+    let message = contactMessage.val();
+    if (name.length > 0 && email.length > 0 && message.length > 0) {
+        emailjs.send("gmail","github_portfolio",{name, email, message});
+        alert("Thanks! Your email has been sent!");
+        contactName.val("");
+        contactMessage.val("");
+        contactEmail.val("");
+    }
 });
