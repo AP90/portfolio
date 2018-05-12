@@ -8,6 +8,10 @@ images[1] = "styles/images/hiit-timer.png";
 images[2] = "styles/images/kuroinu.png";
 images[3] = "styles/images/parker-belgravia.png";
 
+// not need for slideshow fn
+document.slide.src = images[0];
+$(".slide-img").fadeToggle("slow");
+
 function changeImg() {
 
     document.slide.src = images[i];
@@ -26,7 +30,7 @@ function changeImg() {
     setTimeout("changeImg()", time);
 }
 
-window.onload = changeImg;
+// window.onload = changeImg;
 
 
 
