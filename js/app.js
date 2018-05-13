@@ -4,31 +4,31 @@ let images = [];
 let time = 3000;
 
 images[0] = "styles/images/prepxp2.png";
-images[1] = "styles/images/hiit-timer.png";
-images[2] = "styles/images/kuroinu.png";
-images[3] = "styles/images/parker-belgravia.png";
+// images[1] = "styles/images/hiit-timer.png";
+// images[2] = "styles/images/kuroinu.png";
+// images[3] = "styles/images/parker-belgravia.png";
 
 // not need for slideshow fn
 document.slide.src = images[0];
 $(".slide-img").fadeToggle("slow");
 
-function changeImg() {
+// function changeImg() {
 
-    document.slide.src = images[i];
-    $(".slide-img").fadeToggle("slow");
-    if (i < images.length - 1) {
-        i++;
-        setTimeout(function() {
-            $(".slide-img").fadeToggle("slow"); 
-        }, 2000);
-    } else {
-        i = 0;
-        setTimeout(function() {
-            $(".slide-img").fadeToggle("slow"); 
-        }, 2000);
-    }
-    setTimeout("changeImg()", time);
-}
+//     document.slide.src = images[i];
+//     $(".slide-img").fadeToggle("slow");
+//     if (i < images.length - 1) {
+//         i++;
+//         setTimeout(function() {
+//             $(".slide-img").fadeToggle("slow"); 
+//         }, 2000);
+//     } else {
+//         i = 0;
+//         setTimeout(function() {
+//             $(".slide-img").fadeToggle("slow"); 
+//         }, 2000);
+//     }
+//     setTimeout("changeImg()", time);
+// }
 
 // window.onload = changeImg;
 
