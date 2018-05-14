@@ -13,7 +13,6 @@ document.slide.src = images[0];
 $(".slide-img").fadeToggle("slow");
 
 // function changeImg() {
-
 //     document.slide.src = images[i];
 //     $(".slide-img").fadeToggle("slow");
 //     if (i < images.length - 1) {
